@@ -15,6 +15,7 @@ const db=knex({
       connectionString: process.env.DATABASE_URL || 'postgresql://postgres:test@localhost:5432/smart-brain',
     ssl: process.env.DATABASE_URL ? true : false
     }
+  
   });
 let users;
   db.select('*').from('users')
