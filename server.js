@@ -12,8 +12,8 @@ const image = require('./controllers/image')
 const db=knex({
     client: 'pg',
     connection: {
-      connectionString: process.env.DATABASE_URL || 'postgresql://postgres:test@localhost:5432/smart-brain',
-    ssl: process.env.DATABASE_URL ? true : false
+      connectionString: process.env.DATABASE_URL ,
+          ssl: true
     }
   
   });
