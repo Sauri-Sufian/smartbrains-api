@@ -10,9 +10,10 @@ const handleApiCall = (req,res)=>{
      Clarifai.FACE_DETECT_MODEL, 
     req.body.input)
     .then(data =>{
+      console.log(data)
         res.json(data);
     })
-    .catch(err => res.status(400).json("unable to connect api"))
+    .catch(err => res.status(400).json(err , "unable to connect api"))
 
   }
 const handleImage=(req,res,db)=>{
